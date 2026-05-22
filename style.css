@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none; /* Telefonda matn tanlanib qolmasligi uchun */
+}
+
+body {
+    background-color: #0b0f19; /* Midnight Obsidian foni */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Kalkulyator korpusi - Telefonga moslangan */
+.calculator {
+    width: 100%;
+    max-width: 360px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Oynasimon effekt */
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Ekran qismi */
+.display {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: right;
+    margin-bottom: 25px;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    word-break: break-all;
+}
+
+.history {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.current {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+/* Tugmalar to'plami */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 18px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(0.95);
+}
+
+/* Operatorlar ranggi (Masalan: +, -, *, /) */
+.btn.action {
+    color: #4da6ff;
+    background: rgba(77, 166, 255, 0.1);
+}
+
+/* Tenglik tugmasi */
+.btn.equal {
+    grid-row: span 2;
+    background: #007fff;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.equal:active {
+    background: #0059b3;
+}
+
+.btn.zero {
+    grid-column: span 2;
+}
