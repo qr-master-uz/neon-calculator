@@ -31,7 +31,9 @@ jobs:
 
       - name: Initialize Capacitor
         run: |
-          npx cap init "Neon Calculator" "com.neon.calculator" --web-dir=.
+          mkdir www
+          cp index.html style.css script.js www/
+          npx cap init "Neon Calculator" "com.neon.calculator" --web-dir=www
 
       - name: Add Android Platform
         run: npx cap add android
